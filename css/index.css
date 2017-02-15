@@ -1,0 +1,215 @@
+.fa {
+    margin: 20px;
+    color: white;
+}
+
+#search-btn {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.material-icons.md-64 {
+    font-size: 64px;
+}
+
+.material-icons {
+    margin: 20px;
+    color: white;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #161E23;
+}
+
+input {
+    display: block;
+    width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border: 0;
+}
+
+input:focus, input:active {
+    outline: none;
+}
+
+p {
+    font-size: 14px;
+    text-align: center;
+}
+
+p span {
+    cursor: pointer;
+    color: #666;
+}
+
+ul {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#snackbar {
+    visibility: hidden;
+    /* Hidden by default. Visible on click */
+    min-width: 250px;
+    /* Set a default minimum width */
+    margin-left: -125px;
+    /* Divide value of min-width by 2 */
+    background-color: #333;
+    /* Black background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Centered text */
+    border-radius: 2px;
+    /* Rounded borders */
+    padding: 16px;
+    /* Padding */
+    position: fixed;
+    /* Sit on top of the screen */
+    z-index: 1;
+    /* Add a z-index if needed */
+    left: 50%;
+    /* Center the snackbar */
+    bottom: 30px;
+    /* 30px from the bottom */
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+:root {
+    --displayError: none;
+    --displayDemo: block;
+    /*--bgColor: #F8BBD0;*/
+    --bgColor: rgba(0, 0, 0, 0.2);
+    --color: #C2185B;
+}
+
+:root {
+    --cssuiProgressHeight: 2rem;
+}
+
+.cssui-progress__bar {
+    appearance: none;
+    border: none;
+    display: block;
+    height: var(--cssuiProgressHeight);
+    background-color: var(--cssuiProgressBgColor);
+    color: var(--cssuiProgressColor);
+}
+
+.cssui-progress__bar[value]::-webkit-progress-bar {
+    background-color: var(--cssuiProgressBgColor);
+}
+
+.cssui-progress__bar[value]::-webkit-progress-value {
+    background-color: var(--cssuiProgressColor);
+    transition: width .4s ease-out;
+}
+
+.cssui-progress__bar[value]::-moz-progress-bar {
+    background-color: var(--cssuiProgressColor);
+}
+
+.cssui-progress__bar {
+    position: absolute;
+    width: 298px;
+    margin: 20px auto;
+    margin-left: 19px;
+    top: 45px;
+    --cssuiProgressBgColor: var(--bgColor);
+    --cssuiProgressColor: var(--color);
+    --cssuiProgressHeight: 2px;
+}
+
+.cssui-progress__value {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 1rem;
+    display: inline-block;
+}
