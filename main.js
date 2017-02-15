@@ -12,7 +12,7 @@ function createWindow() {
         width: 365,
         height: 600
     })
-    win.setMenu(null)
+    //win.setMenu(null)
 
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),

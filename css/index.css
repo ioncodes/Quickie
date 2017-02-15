@@ -3,6 +3,12 @@
     color: white;
 }
 
+.octicon {
+    color: white;
+    font-size: 64px !important;
+    margin: 20px;
+}
+
 #search-btn {
     position: absolute;
     right: 20px;
