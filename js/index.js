@@ -31,6 +31,11 @@ totalItems += l;
 for (var i = 0; i < l; i++) {
     html += '<li><i class="icon ' + io[i] + '"></i></li>';
 }
+l = fi.length;
+totalItems += l;
+for (var i = 0; i < l; i++) {
+    html += '<li><i class="' + fi[i] + '"></i></li>';
+}
 ul.innerHTML = html;
 
 progress.setAttribute('max', totalItems);

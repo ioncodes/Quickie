@@ -16,6 +16,13 @@
     margin: 20px !important;
 }
 
+i[class^="fi-"] {
+    color: white;
+    font-size: 64px !important;
+    display: inline-block !important;
+    margin: 20px !important;
+}
+
 .devicons {
     color: white;
     font-size: 64px !important;
@@ -110,7 +117,7 @@ li {
     /* Hidden by default. Visible on click */
     min-width: 250px;
     /* Set a default minimum width */
-    margin-left: -125px;
+    margin-left: -145px;
     /* Divide value of min-width by 2 */
     background-color: #333;
     /* Black background color */
