@@ -9,6 +9,13 @@
     margin: 20px;
 }
 
+.devicons {
+    color: white;
+    font-size: 64px !important;
+    display: inline-block !important;
+    margin: 20px !important;
+}
+
 #search-btn {
     position: absolute;
     right: 20px;

@@ -21,6 +21,11 @@ totalItems += l;
 for (var i = 0; i < l; i++) {
     html += '<li><i class="octicon ' + oc[i] + '"></i></li>';
 }
+l = di.length;
+totalItems += l;
+for (var i = 0; i < l; i++) {
+    html += '<li><i class="devicons ' + di[i] + '"></i></li>';
+}
 ul.innerHTML = html;
 
 progress.setAttribute('max', totalItems);
@@ -41,6 +46,8 @@ $(document).on("click", "li", function(event) {
         html = '<i class="' + event.target.className + '" aria-hidden="true"></i>';
     } else if(event.target.className.indexOf('material-icons') !== -1){
         html = '<i class="material-icons">' + event.target.textContent + '"</i>';
+    } else if(event.target.className.indexOf('octicon') !== -1){
+        html = '<i class="'+event.target.className+'"></i>';
     } else {
         html = '<i class="'+event.target.className+'"></i>';
     }
@@ -66,6 +73,8 @@ function search() {
                     html += '<li><i style="visibility: hidden; position: absolute;" class="' + element.className + '"></i></li>';
                 } else if (element.className.indexOf('material-icons') !== -1) {
                     html += '<li><i style="visibility: hidden; position: absolute;" class="material-icons md-64">' + element.textContent + '</i></li>';
+                } else if (element.className.indexOf('octicon') !== -1) {
+                    html += '<li><i style="visibility: hidden; position: absolute;" class="' + element.className + '"></i></li>';
                 } else {
                     html += '<li><i style="visibility: hidden; position: absolute;" class="' + element.className + '"></i></li>';
                 }
@@ -74,6 +83,8 @@ function search() {
                     html += '<li><i style="visibility: visible;" class="' + element.className + '"></i></li>';
                 } else if (element.className.indexOf('material-icons') !== -1) {
                     html += '<li><i style="visibility: visible;" class="material-icons md-64">' + element.textContent + '</i></li>';
+                } else if (element.className.indexOf('octicon') !== -1) {
+                    html += '<li><i style="visibility: visible;" class="' + element.className + '"></i></li>';
                 } else {
                     html += '<li><i style="visibility: visible;" class="' + element.className + '"></i></li>';
                 }
