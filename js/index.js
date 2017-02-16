@@ -35,12 +35,15 @@ $('#search').keypress(function(e) {
     }
 });
 
-$("li").click(function(event) {
+$(document).on("click", "li", function(event) {
+    console.log('trigger: ' + event.target.className);
     var html;
     if (event.target.className.indexOf('fa') !== -1) {
         html = '<i class="' + event.target.className + '" aria-hidden="true"></i>';
-    } else {
+    } else if(event.target.className.indexOf('material-icons') !== -1){
         html = '<i class="material-icons">' + event.target.textContent + '"</i>';
+    } else {
+        html = '<i class="'+event.target.className+'"></i>';
     }
     clipboard.writeText(html);
     var x = document.getElementById("snackbar");
@@ -65,7 +68,7 @@ function search() {
                 } else if (element.className.indexOf('material-icons') !== -1) {
                     html += '<li><i style="visibility: hidden; position: absolute;" class="material-icons md-64">' + element.textContent + '</i></li>';
                 } else {
-                    html += '<li><i style="visibility: hidden; position: absolute;" class="octicon ' + element.className + '"></i></li>';
+                    html += '<li><i style="visibility: hidden; position: absolute;" class="' + element.className + '"></i></li>';
                 }
             } else {
                 if (element.className.indexOf('fa ') !== -1) {
@@ -73,7 +76,7 @@ function search() {
                 } else if (element.className.indexOf('material-icons') !== -1) {
                     html += '<li><i style="visibility: visible;" class="material-icons md-64">' + element.textContent + '</i></li>';
                 } else {
-                    html += '<li><i style="visibility: visible;" class="octicon ' + element.className + '"></i></li>';
+                    html += '<li><i style="visibility: visible;" class="' + element.className + '"></i></li>';
                 }
             }
         }
