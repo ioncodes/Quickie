@@ -36,7 +36,6 @@ $('#search').keypress(function(e) {
 });
 
 $(document).on("click", "li", function(event) {
-    console.log('trigger: ' + event.target.className);
     var html;
     if (event.target.className.indexOf('fa') !== -1) {
         html = '<i class="' + event.target.className + '" aria-hidden="true"></i>';
