@@ -26,6 +26,11 @@ totalItems += l;
 for (var i = 0; i < l; i++) {
     html += '<li><i class="devicons ' + di[i] + '"></i></li>';
 }
+l = io.length;
+totalItems += l;
+for (var i = 0; i < l; i++) {
+    html += '<li><i class="icon ' + io[i] + '"></i></li>';
+}
 ul.innerHTML = html;
 
 progress.setAttribute('max', totalItems);
@@ -76,6 +81,7 @@ function search() {
                 } else if (element.className.indexOf('octicon') !== -1) {
                     html += '<li><i style="visibility: hidden; position: absolute;" class="' + element.className + '"></i></li>';
                 } else {
+                    // general
                     html += '<li><i style="visibility: hidden; position: absolute;" class="' + element.className + '"></i></li>';
                 }
             } else {
@@ -86,6 +92,7 @@ function search() {
                 } else if (element.className.indexOf('octicon') !== -1) {
                     html += '<li><i style="visibility: visible;" class="' + element.className + '"></i></li>';
                 } else {
+                    // general
                     html += '<li><i style="visibility: visible;" class="' + element.className + '"></i></li>';
                 }
             }
