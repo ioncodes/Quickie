@@ -19,7 +19,7 @@ for (var i = 0; i < l; i++) {
 l = oc.length;
 totalItems += l;
 for (var i = 0; i < l; i++) {
-    html += '<li><span class="octicon ' + oc[i] + '"></span></li>';
+    html += '<li><i class="octicon ' + oc[i] + '"></i></li>';
 }
 ul.innerHTML = html;
 
@@ -60,20 +60,20 @@ function search() {
         var element = elements[i];
         if (element.id !== 'search-btn') {
             if (element.className.indexOf(value) === -1 && element.textContent.indexOf(value) === -1) {
-                if(element.className.indexOf('fa ') !== -1) {
-                    html += '<li><i style="visibility: hidden; position: absolute;" class="'+element.className+'"></i></li>';
-                } else if(element.className.indexOf('material-icons') !== -1) {
+                if (element.className.indexOf('fa ') !== -1) {
+                    html += '<li><i style="visibility: hidden; position: absolute;" class="' + element.className + '"></i></li>';
+                } else if (element.className.indexOf('material-icons') !== -1) {
                     html += '<li><i style="visibility: hidden; position: absolute;" class="material-icons md-64">' + element.textContent + '</i></li>';
                 } else {
-                    html += '<li><span style="visibility: hidden; position: absolute;" class="octicon ' + element.className + '"></span></li>';
+                    html += '<li><i style="visibility: hidden; position: absolute;" class="octicon ' + element.className + '"></i></li>';
                 }
             } else {
-                if(element.className.indexOf('fa ') !== -1) {
-                    html += '<li><i style="visibility: visible;" class="'+element.className+'"></i></li>';
-                } else if(element.className.indexOf('material-icons') !== -1) {
+                if (element.className.indexOf('fa ') !== -1) {
+                    html += '<li><i style="visibility: visible;" class="' + element.className + '"></i></li>';
+                } else if (element.className.indexOf('material-icons') !== -1) {
                     html += '<li><i style="visibility: visible;" class="material-icons md-64">' + element.textContent + '</i></li>';
                 } else {
-                    html += '<li><span style="visibility: visible;" class="octicon ' + element.className + '"></span></li>';
+                    html += '<li><i style="visibility: visible;" class="octicon ' + element.className + '"></i></li>';
                 }
             }
         }
