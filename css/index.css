@@ -16,6 +16,13 @@
     margin: 20px !important;
 }
 
+.oi {
+    color: white;
+    font-size: 64px !important;
+    display: inline-block !important;
+    margin: 20px !important;
+}
+
 i[class^="fi-"] {
     color: white;
     font-size: 64px !important;
